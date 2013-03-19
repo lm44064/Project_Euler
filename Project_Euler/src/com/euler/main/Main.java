@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import com.euler.fibonacci.Fibonacci;
+import com.euler.largestpalindromeproduct.LargestPalindromeProduct;
 import com.euler.primefactors.PrimeFactorGenerator;
 
 @SuppressWarnings("unused")
@@ -14,13 +15,14 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 
 		String input = null;
-		long numberInput;
+		long longInput;
+		int intInput;
 
+		intInput = Integer.parseInt(readInput());
+		//longInput = Long.parseLong(readInput());
 
-		numberInput = Long.parseLong(readInput());
-
-		PrimeFactorGenerator primeFactorGenerator = new PrimeFactorGenerator(numberInput);
-		primeFactorGenerator.generatePrimeFactors();
+		LargestPalindromeProduct largestPalindromeProduct = new LargestPalindromeProduct(intInput);
+		largestPalindromeProduct.calculateLargestPalindromeProduct();
 	}
 
 	public static String readInput() throws IOException
