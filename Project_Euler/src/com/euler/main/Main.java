@@ -1,13 +1,12 @@
 package com.euler.main;
 
-
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 import com.euler.fibonacci.Fibonacci;
 import com.euler.largestpalindromeproduct.LargestPalindromeProduct;
+import com.euler.largestproductinseries.LargestProductInSeries;
 import com.euler.primefactors.PrimeFactorGenerator;
 import com.euler.primefinder.PrimeFinder;
 import com.euler.smallestmultiple.SmallestMultipleFinder;
@@ -21,18 +20,18 @@ public class Main {
 		long longInput;
 		int intInput1, intInput2;
 
-		intInput1 = Integer.parseInt(readInput());
+		//intInput1 = Integer.parseInt(readInput());
 		//intInput2 = Integer.parseInt(readInput());
 		//longInput = Long.parseLong(readInput());
 
-		PrimeFinder primeFinder = new PrimeFinder(intInput1);
-		primeFinder.findPrimeNumber();
+		LargestProductInSeries largestProductInSeries = new LargestProductInSeries(readInput("Input series:"), Integer.parseInt(readInput("Input length of subseries:")));
+		largestProductInSeries.findProduct();
 	}
 
-	public static String readInput() throws IOException
+	public static String readInput(String inputText) throws IOException
 	{
 		String input = null;
-		System.out.println("Enter number: ");
+		System.out.println(inputText);
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
 		input = bReader.readLine();
 		return input;	
