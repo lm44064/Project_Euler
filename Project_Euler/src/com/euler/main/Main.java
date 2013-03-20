@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import com.euler.fibonacci.Fibonacci;
 import com.euler.largestpalindromeproduct.LargestPalindromeProduct;
 import com.euler.primefactors.PrimeFactorGenerator;
+import com.euler.primefinder.PrimeFinder;
 import com.euler.smallestmultiple.SmallestMultipleFinder;
 import com.euler.sumsquaredifference.SumSquareDifferenceFinder;
 
@@ -21,11 +22,11 @@ public class Main {
 		int intInput1, intInput2;
 
 		intInput1 = Integer.parseInt(readInput());
-		intInput2 = Integer.parseInt(readInput());
+		//intInput2 = Integer.parseInt(readInput());
 		//longInput = Long.parseLong(readInput());
 
-		SumSquareDifferenceFinder sumSquareDifferenceFinder = new SumSquareDifferenceFinder(intInput1, intInput2);
-		sumSquareDifferenceFinder.findSumSquareDifference();
+		PrimeFinder primeFinder = new PrimeFinder(intInput1);
+		primeFinder.findPrimeNumber();
 	}
 
 	public static String readInput() throws IOException
