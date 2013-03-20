@@ -2,6 +2,8 @@ package com.euler.primefactors;
 
 import java.util.LinkedList;
 
+import com.euler.utils.Utils;
+
 public class PrimeFactorGenerator 
 {	
 	long number;
@@ -20,14 +22,14 @@ public class PrimeFactorGenerator
 	{
 		System.out.println("Generating prime factors.");
 
-		if (checkIsPrime(number))
+		if (Utils.checkIsPrime(number))
 		{
 			System.out.println("Inital number is prime!");
 		}
 
 		else
 		{
-			while(!checkIsPrime(number))
+			while(!Utils.checkIsPrime(number))
 			{
 				if (number % smallestPrime == 0)
 				{
@@ -41,20 +43,12 @@ public class PrimeFactorGenerator
 					{
 						smallestPrime++;
 					}
-					while(!checkIsPrime(smallestPrime));
+					while(!Utils.checkIsPrime(smallestPrime));
 				}				
 			}
 			primeFactors.add((int) number);
 		}
 
 		System.out.println("Prime factors are " + primeFactors.toString());
-	}
-
-	private boolean checkIsPrime(long number) {
-		for (int i = 2; i <= number/2; ++i)
-		{
-			if (number % i == 0) return false;
-		}
-		return true;
 	}
 }

@@ -1,5 +1,7 @@
 package com.euler.primefinder;
 
+import com.euler.utils.Utils;
+
 public class PrimeFinder 
 {
 	int primeNumber;
@@ -17,7 +19,7 @@ public class PrimeFinder
 		while (location != primeNumber)
 		{
 			primeCandidate++;
-			if (checkIsPrime(primeCandidate))
+			if (Utils.checkIsPrime(primeCandidate))
 			{
 				location++;
 			}
@@ -25,13 +27,4 @@ public class PrimeFinder
 		
 		System.out.println("Prime number " + primeCandidate + " is the " + this.primeNumber + ". prime number.");
 	}
-	
-	private boolean checkIsPrime(int number) {
-		for (int i = 2; i <= number/2; ++i)
-		{
-			if (number % i == 0) return false;
-		}
-		return true;
-	}
-
 }

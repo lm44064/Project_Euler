@@ -9,9 +9,11 @@ import com.euler.largestpalindromeproduct.LargestPalindromeProduct;
 import com.euler.largestproductinseries.LargestProductInSeries;
 import com.euler.primefactors.PrimeFactorGenerator;
 import com.euler.primefinder.PrimeFinder;
+import com.euler.primesummarizer.PrimeSummarizer;
 import com.euler.pythagoreantriplets.PythagoreanTripletFinder;
 import com.euler.smallestmultiple.SmallestMultipleFinder;
 import com.euler.sumsquaredifference.SumSquareDifferenceFinder;
+import com.euler.utils.Utils;
 
 @SuppressWarnings("unused")
 public class Main {
@@ -21,21 +23,10 @@ public class Main {
 		long longInput;
 		int intInput1, intInput2;
 
-		//intInput1 = Integer.parseInt(readInput());
-		//intInput2 = Integer.parseInt(readInput());
-		//longInput = Long.parseLong(readInput());
+		//intInput1 = Integer.parseInt(Utils.readInput());
+		//longInput = Long.parseLong(Utils.readInput());
 
-		PythagoreanTripletFinder pythagoreanTripletFinder = new PythagoreanTripletFinder(Integer.parseInt(readInput("Input target:")));
-		pythagoreanTripletFinder.findTriplets();
+		PrimeSummarizer primeSummarizer = new PrimeSummarizer(Integer.parseInt(Utils.readInput("Input limit: ")));
+		primeSummarizer.Summarize();
 	}
-
-	public static String readInput(String inputText) throws IOException
-	{
-		String input = null;
-		System.out.println(inputText);
-		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
-		input = bReader.readLine();
-		return input;	
-	}
-
 }
