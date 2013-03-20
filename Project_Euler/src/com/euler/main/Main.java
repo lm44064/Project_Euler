@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import com.euler.fibonacci.Fibonacci;
 import com.euler.largestpalindromeproduct.LargestPalindromeProduct;
 import com.euler.primefactors.PrimeFactorGenerator;
+import com.euler.smallestmultiple.SmallestMultipleFinder;
 
 @SuppressWarnings("unused")
 public class Main {
@@ -16,13 +17,14 @@ public class Main {
 
 		String input = null;
 		long longInput;
-		int intInput;
+		int intInput1, intInput2;
 
-		intInput = Integer.parseInt(readInput());
+		intInput1 = Integer.parseInt(readInput());
+		intInput2 = Integer.parseInt(readInput());
 		//longInput = Long.parseLong(readInput());
 
-		LargestPalindromeProduct largestPalindromeProduct = new LargestPalindromeProduct(intInput);
-		largestPalindromeProduct.calculateLargestPalindromeProduct();
+		SmallestMultipleFinder smallestMultipleFinder = new SmallestMultipleFinder(intInput1, intInput2);
+		smallestMultipleFinder.findSmallestMultiple();
 	}
 
 	public static String readInput() throws IOException
