@@ -10,6 +10,7 @@ import com.euler.fibonacci.Fibonacci;
 import com.euler.largestpalindromeproduct.LargestPalindromeProduct;
 import com.euler.primefactors.PrimeFactorGenerator;
 import com.euler.smallestmultiple.SmallestMultipleFinder;
+import com.euler.sumsquaredifference.SumSquareDifferenceFinder;
 
 @SuppressWarnings("unused")
 public class Main {
@@ -23,8 +24,8 @@ public class Main {
 		intInput2 = Integer.parseInt(readInput());
 		//longInput = Long.parseLong(readInput());
 
-		SmallestMultipleFinder smallestMultipleFinder = new SmallestMultipleFinder(intInput1, intInput2);
-		smallestMultipleFinder.findSmallestMultiple();
+		SumSquareDifferenceFinder sumSquareDifferenceFinder = new SumSquareDifferenceFinder(intInput1, intInput2);
+		sumSquareDifferenceFinder.findSumSquareDifference();
 	}
 
 	public static String readInput() throws IOException
