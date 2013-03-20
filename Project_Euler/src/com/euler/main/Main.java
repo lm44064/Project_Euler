@@ -9,6 +9,7 @@ import com.euler.largestpalindromeproduct.LargestPalindromeProduct;
 import com.euler.largestproductinseries.LargestProductInSeries;
 import com.euler.primefactors.PrimeFactorGenerator;
 import com.euler.primefinder.PrimeFinder;
+import com.euler.pythagoreantriplets.PythagoreanTripletFinder;
 import com.euler.smallestmultiple.SmallestMultipleFinder;
 import com.euler.sumsquaredifference.SumSquareDifferenceFinder;
 
@@ -24,8 +25,8 @@ public class Main {
 		//intInput2 = Integer.parseInt(readInput());
 		//longInput = Long.parseLong(readInput());
 
-		LargestProductInSeries largestProductInSeries = new LargestProductInSeries(readInput("Input series:"), Integer.parseInt(readInput("Input length of subseries:")));
-		largestProductInSeries.findProduct();
+		PythagoreanTripletFinder pythagoreanTripletFinder = new PythagoreanTripletFinder(Integer.parseInt(readInput("Input target:")));
+		pythagoreanTripletFinder.findTriplets();
 	}
 
 	public static String readInput(String inputText) throws IOException
