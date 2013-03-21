@@ -3,8 +3,21 @@ package com.euler.utils;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.util.Scanner;
 
 public class Utils {
+	
+	static PrintStream original = System.out;
+    static PrintStream suppress = new PrintStream(new OutputStream() 
+    {
+		@Override
+		public void write(int arg0) throws IOException {
+			// Do nothing. Suppress syso calls.
+		}
+    });
+	
 	public static boolean checkIsPrime(Object number) 
 	{
 		long mNumber;
@@ -31,7 +44,6 @@ public class Utils {
 				if (mNumber % i == 0)
 					return false;
 			}
-			System.out.println(mNumber);
 			return true;
 		}
 	}
@@ -42,8 +54,23 @@ public class Utils {
 		System.out.println(inputText);
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(
 				System.in));
-		input = bReader.readLine();
+		Scanner scanner = new Scanner(bReader);
+		scanner.useDelimiter("\n");
+		while (scanner.hasNext())
+		{
+			input = input + " " + scanner.next();
+			System.out.println("Current: " + input);
+		}
 		return input;
 	}
-
+	
+	public static void SuppressSyso()
+	{
+		System.setOut(suppress);
+	}
+	
+	public static void UnsuppressSyso()
+	{
+		System.setOut(original);
+	}
 }

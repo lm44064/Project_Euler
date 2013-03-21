@@ -25,7 +25,6 @@ public class Main {
 
 		//intInput1 = Integer.parseInt(Utils.readInput());
 		//longInput = Long.parseLong(Utils.readInput());
-
 		PrimeSummarizer primeSummarizer = new PrimeSummarizer(Integer.parseInt(Utils.readInput("Input limit: ")));
 		primeSummarizer.Summarize();
 	}
