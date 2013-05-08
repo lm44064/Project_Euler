@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 import com.euler.fibonacci.Fibonacci;
 import com.euler.largestpalindromeproduct.LargestPalindromeProduct;
+import com.euler.largestproductingrid.LargestProductInGrid;
 import com.euler.largestproductinseries.LargestProductInSeries;
 import com.euler.primefactors.PrimeFactorGenerator;
 import com.euler.primefinder.PrimeFinder;
@@ -25,7 +26,7 @@ public class Main {
 
 		//intInput1 = Integer.parseInt(Utils.readInput());
 		//longInput = Long.parseLong(Utils.readInput());
-		PrimeSummarizer primeSummarizer = new PrimeSummarizer(Integer.parseInt(Utils.readInput("Input limit: ")));
-		primeSummarizer.Summarize();
+		LargestProductInGrid largestProductInGrid = new LargestProductInGrid(Utils.readInput("Input limit: "));
+		
 	}
 }

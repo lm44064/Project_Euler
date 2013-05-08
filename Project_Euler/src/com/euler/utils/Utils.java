@@ -1,8 +1,6 @@
 package com.euler.utils;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -50,16 +48,22 @@ public class Utils {
 
 	public static String readInput(String inputText) throws IOException 
 	{
-		String input = null;
+		String input = "";
 		System.out.println(inputText);
-		BufferedReader bReader = new BufferedReader(new InputStreamReader(
-				System.in));
-		Scanner scanner = new Scanner(bReader);
-		scanner.useDelimiter("\n");
-		while (scanner.hasNext())
+		Scanner consoleScanner = new Scanner(System.in);
+		while (consoleScanner.hasNextLine())
 		{
-			input = input + " " + scanner.next();
-			System.out.println("Current: " + input);
+			Scanner sScanner = new Scanner(consoleScanner.nextLine());
+			if(!sScanner.hasNext()) 
+				break;
+			while(sScanner.hasNext())
+			{
+				if(input.isEmpty())
+					input = sScanner.nextLine() + "\n";
+				else
+					input = input + sScanner.nextLine() + "\n";
+				System.out.println("Current: " + input);
+			}
 		}
 		return input;
 	}
