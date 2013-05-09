@@ -62,7 +62,7 @@ public class Utils {
 					input = sScanner.nextLine() + "\n";
 				else
 					input = input + sScanner.nextLine() + "\n";
-				System.out.println("Current: " + input);
+				
 			}
 		}
 		return input;

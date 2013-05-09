@@ -26,7 +26,7 @@ public class Main {
 
 		//intInput1 = Integer.parseInt(Utils.readInput());
 		//longInput = Long.parseLong(Utils.readInput());
-		LargestProductInGrid largestProductInGrid = new LargestProductInGrid(Utils.readInput("Input limit: "));
+		LargestProductInGrid largestProductInGrid = new LargestProductInGrid(Utils.readInput("Input grid (Press Enter after entering each row, and once more after confirming the last row): "));
 		
 	}
 }
