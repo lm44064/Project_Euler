@@ -36,6 +36,11 @@ public class LargestProductInGrid
 			System.out.println();
 		}*/			
 	}
+	
+	public void findProduct(int limit)
+	{
+		
+	}
 
 	private boolean rowsAllSameLength(String[] rows) 
 	{
